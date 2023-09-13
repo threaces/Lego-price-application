@@ -8,6 +8,8 @@ dynamodb = boto3.resource('dynamodb',
                         aws_secret_access_key = 'XXXXXXXXX',
                         region_name = 'us-east-2')
 
+# Functions to get concrete table from aws service
+
 def amazon_database(name):
     amazon_table = dynamodb.Table(name)
 
@@ -15,6 +17,8 @@ def amazon_database(name):
 
 table = amazon_database("Lego")
 smyk_table = amazon_database("Lego_smyk")
+
+# Function to get all LEGO set title from dynamodb
 
 def get_set_title(amazon_table):
 
@@ -33,6 +37,8 @@ def get_set_title(amazon_table):
 
 list_of_sets = get_set_title(table)
 #list_of_sets_smyk = get_set_title(smyk_table)
+
+# Get prices for concrete set f.e. Ferrari Daytona
 
 def get_price_df(amazon_table, set_title):
     
@@ -60,6 +66,8 @@ def get_price_df(amazon_table, set_title):
     df = df.drop(['index'], axis=1)
 
     return df
+
+# Get min historical set price + date
 
 def get_min_price(df):
     filtered_df = df[df['Price'] == df['Price'].min()]
