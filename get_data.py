@@ -4,8 +4,8 @@ from boto3.dynamodb.conditions import Key, Attr
 import pandas as pd
 
 dynamodb = boto3.resource('dynamodb', 
-                        aws_access_key_id = 'AKIAQ23LY5IKLWXH4X2T',
-                        aws_secret_access_key = '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',
+                        aws_access_key_id = 'XXXXXX',
+                        aws_secret_access_key = 'XXXXXXXXX',
                         region_name = 'us-east-2')
 
 def amazon_database(name):
