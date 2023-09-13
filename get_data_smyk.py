@@ -5,8 +5,8 @@ import pandas as pd
 from get_data import smyk_table
 
 dynamodb = boto3.resource('dynamodb', 
-                        aws_access_key_id = 'AKIAQ23LY5IKLWXH4X2T',
-                        aws_secret_access_key = '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',
+                        aws_access_key_id = 'XXXXX',
+                        aws_secret_access_key = 'XXXXXXX',
                         region_name = 'us-east-2')
 
 def get_set_title(amazon_table):
