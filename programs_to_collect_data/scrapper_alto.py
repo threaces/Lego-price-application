@@ -9,8 +9,10 @@ def get_web_data(url: str):
   soup1 = BeautifulSoup(link_to_lego.content, 'html.parser')
   soup2 = BeautifulSoup(soup1.prettify(), 'html.parser')
 
+  return soup2
 
-  title = soup2.find(class_="sc-1bker4h-4 hMQkuz").get_text()
+
+  '''title = soup2.find(class_="sc-1bker4h-4 hMQkuz").get_text()
   cleaned_title = title.strip().split(' ')
 
   dict_of_information = {}
@@ -58,6 +60,7 @@ def get_web_data(url: str):
 
   dict_of_information['Price per Element'] = price_per_element
 
-  return dict_of_information
+  return dict_of_information'''
 
 
+print(get_web_data("https://www.al.to/p/563494-klocki-lego-lego-creator-3-w-1-31109-statek-piracki-3-w-1.html"))
